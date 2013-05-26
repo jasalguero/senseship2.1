@@ -1,8 +1,10 @@
-@(message: String)
+@(projects: List[Int] = List(1,2,3,4,5,6))
 
-@main("Welcome to Play 2.1") {
+@common.main("Senseship 2.0") {
 
-    <!-- Managed By -->
+    @*******************
+    ** Managed By
+    *******************@
     <div class="row">
         <div class="large-12 columns">
             <div class="panel">
@@ -21,106 +23,48 @@
                 </div>
             </div>
         </div>
+    </div>
 
-            <!-- End Managed By -->
+    @*******************
+    ** End Managed By
+    *******************@
 
 
-        <div class="row">
         <div class="large-12 columns">
             <div class="row">
-                    <!-- Thumbnails -->
+
+                @*******************
+                ** Project List
+                *******************@
 
                 <div class="large-8 columns">
                     <div class="row">
 
-                        <div class="large-4 small-6 columns">
-                            <img src="http://placehold.it/1000x1000&text=Thumbnail">
+                        @for(p <- projects) {
+                            <div class="large-4 small-6 columns">
+                                <img src="http://placehold.it/1000x1000&text=Thumbnail" style="width:500px; height:200px">
 
-                            <div class="panel">
-                                <h5>Item Name</h5>
-                                <h6 class="subheader">$000.00</h6>
-                            </div>
-                        </div>
-
-                        <div class="large-4 small-6 columns">
-                            <img src="http://placehold.it/500x500&text=Thumbnail">
-
-                            <div class="panel">
-                                <h5>Item Name</h5>
-                                <h6 class="subheader">$000.00</h6>
-                            </div>
-                        </div>
-
-                        <div class="large-4 small-6 columns">
-                            <img src="http://placehold.it/500x500&text=Thumbnail">
-
-                            <div class="panel">
-                                <h5>Item Name</h5>
-                                <h6 class="subheader">$000.00</h6>
-                            </div>
-                        </div>
-
-                        <div class="large-4 small-6 columns">
-                            <img src="http://placehold.it/500x500&text=Thumbnail">
-
-                            <div class="panel">
-                                <h5>Item Name</h5>
-                                <h6 class="subheader">$000.00</h6>
-                            </div>
-                        </div>
-
-                        <div class="large-4 small-6 columns">
-                            <img src="http://placehold.it/500x500&text=Thumbnail">
-
-                            <div class="panel">
-                                <h5>Item Name</h5>
-                                <h6 class="subheader">$000.00</h6>
-                            </div>
-                        </div>
-
-                        <div class="large-4 small-6 columns">
-                            <img src="http://placehold.it/500x500&text=Thumbnail">
-
-                            <div class="panel">
-                                <h5>Item Name</h5>
-                                <h6 class="subheader">$000.00</h6>
-                            </div>
-                        </div>
-                    </div>
-
-                        <!-- End Thumbnails -->
-
-
-                        <!-- Managed By -->
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <div class="panel">
-                                <div class="row">
-
-                                    <div class="large-2 small-6 columns">
-                                        <img src="http://placehold.it/300x300&text=Site Owner">
-                                    </div>
-
-                                    <div class="large-10 small-6 columns">
-                                        <strong>This Site Is Managed By<hr/></strong>
-
-                                            Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis
-                                    </div>
-
+                                <div class="panel">
+                                    <h5>Item Name</h5>
+                                    <h6 class="subheader">$000.00</h6>
                                 </div>
                             </div>
-                        </div>
-
-                            <!-- End Managed By -->
-
+                        }
                     </div>
                 </div>
-                    <!-- Side Bar -->
+
+                @*******************
+                ** End Project List
+                *******************@
+
+
+                @*******************
+                ** Sidebar
+                *******************@
+
 
                 <div class="large-4 small-12 columns">
-
                     <img src="http://placehold.it/500x500&text=Logo">
-
                     <div class="hide-for-small panel">
                         <h3>Header</h3>
                         <h5 class="subheader">Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
@@ -132,17 +76,13 @@
                             <h6>99&nbsp; items in your cart</h6>
                         </div>
                     </a>
-
                 </div>
 
-                    <!-- End Side Bar -->
-
+                @*******************
+                ** End Sidebar
+                *******************@
 
             </div>
-
-
-
         </div>
-    </div>
-    
 }
+
