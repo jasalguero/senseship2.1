@@ -1,21 +1,65 @@
-@import "foundation/normalize.css";
-@import "foundation/foundation.css";
-@import "partials/_footer";
-@import "partials/_header";
+//@import "foundation/normalize.css";
+//@import "foundation/foundation.css";
+//@import "partials/_footer";
+//@import "partials/_header";
+//
+////Enable for production
+////@import "foundation/foundation.min";
+////@import "foundation/normalize";
+//
+//@mainGreen: #329553;
+//
+//.border-radius (@radius) {
+//  border-radius: @radius;
+//  -moz-border-radius: @radius;
+//  -webkit-border-radius: @radius;
+//}
+//
+//html, body{
+//  background-image: url("../images/noise.gif");
+//  font-family: 'Open Sans', sans-serif;
+//
+//}
+//
+//a {
+//  color: @mainGreen;
+//}
 
-//Enable for production
-//@import "foundation/foundation.min";
-//@import "foundation/normalize";
 
-@mainGreen: #329553;
+@import "gumby/_gumby";
+//@import "partials/_footer";
+@import "partials/_headerG";
+@import "partials/_mainPage";
 
+
+@mainGreen: #329554;
+@mainGreenDark: #38704B;
+@mainGreenDarker: #10612C;
+@mainGreenLight: #65CA87;
+@mainGreenLighter: #80CA99;
+
+@mainBlue: #2E6B7F;
+@mainBlueDark: #32545F;
+@mainBlueDarker: #0F4253;
+@mainBlueLight: #63A8BF;
+@mainBlueLighter: #7CAEBF;
+
+@mainYellow: #86BA3F;
+@mainYellowDark: #6E8C46;
+@mainYellowDarker: #4F7914;
+@mainYellowLight: #AEDD6F;
+@mainYellowLighter: #BBDD8C;
 
 
 html, body{
   background-image: url("../images/noise.gif");
+  font-family: 'Open Sans', sans-serif;
 }
 
-a {
-  color: @mainGreen;
+a{
+  color: @mainBlue;
+  &:hover { color: @mainBlueLighter }
 }
+
+
 

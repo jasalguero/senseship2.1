@@ -1,33 +1,27 @@
-<div id="navigationContainer">
-    <nav class="top-bar">
-       <ul class="title-area">
-            <li class="name">
-                <h1>
-                    <a href="#">
-                        <img class="main-logo" src="@routes.Assets.at("images/logoBK2.png")"/>
-                    </a>
-                </h1>
-            </li>
-            <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-        </ul>
+@()(implicit lang: Lang)
 
-        <section class="top-bar-section">
-            <ul class="right">
-                <li>
-                    <a href="#">Create Experience</a>
-                </li>
-                <li>
-                    <a href="#">Login / Register</a>
-                </li>
-                <li class="has-dropdown">
-                   <a href="#">Languages</a>
-                    <ul class="dropdown">
-                        <li><a href="#">English</a></li>
-                        <li><a href="#">Deutsche</a></li>
-                        <li><a href="#">Español</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-    </nav>
+<div class="navbar" id="navigationContainer">
+<div class="row">
+    <a class="toggle" gumby-trigger="#navigationContainer &gt; .row &gt; ul" href="#"><i class="icon-menu"></i></a>
+        <a href="#" class="four columns logo">
+            <img src="@routes.Assets.at("images/logoBK2.png")"/>
+        </a>
+    <ul class="eight columns">
+        <li>
+            <a href="#">@Messages("header.menuItem.createExperience")</a>
+        </li>
+        <li>
+            <a href="#">@Messages("header.menuItem.loginRegister")</a>
+        </li>
+        <li><a href="#" class="hasDropdown">@Messages("header.menuItem.languages")</a>
+            <div class="dropdown">
+                <ul>
+                    <li><a href="#">@Messages("header.menuItem.languages.english")</a></li>
+                    <li><a href="#">@Messages("header.menuItem.languages.german")</a></li>
+                    <li><a href="#">@Messages("header.menuItem.languages.spanish")</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
 </div>
